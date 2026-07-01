@@ -33,9 +33,13 @@ body {
 /* ===== Header ===== */
 .site-header {
    text-align: center; 
-   padding:  60px 20px 40px; 
+   padding:  60px 20px 60px; 
    font-family: 'DeFonte';
   background-color: #f28fb1;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
   }
 .site-title {
   font-size: 5rem;
@@ -85,7 +89,9 @@ a:visited {
   line-height: 1.7;
   color: #222222;
 }
-
+hr.pink {
+  border: 1px solid #f28fb1;
+}
 /* Stack vertically on small screens */
 @media (max-width: 600px) {
   .about-me {
