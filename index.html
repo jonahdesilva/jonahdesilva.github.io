@@ -6,23 +6,6 @@
   <title>Jonah de Silva</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
-      img.classList.toggle('zoomed');
-      document.body.classList.toggle('lightbox-open');
-    });
-  });
-});  
-document.querySelectorAll('.video-item video').forEach(video => {
-  video.addEventListener('play', () => {
-    document.querySelectorAll('.video-item video').forEach(other => {
-      if (other !== video) other.pause();
-    });
-  });
-});
-</script>
 <body>
 
   <header class="site-header">
@@ -268,6 +251,7 @@ document.querySelectorAll('.video-item video').forEach(video => {
     });
   });
 });
+
 </script>
 </body>
 </html>
