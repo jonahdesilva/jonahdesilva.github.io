@@ -238,12 +238,24 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
       img.classList.toggle('zoomed');
       document.body.classList.toggle('lightbox-open');
     });
   });
-});  
+
+  // Close the lightbox when clicking anywhere outside the zoomed image
+  document.addEventListener('click', (e) => {
+    if (document.body.classList.contains('lightbox-open') && !e.target.classList.contains('zoomed')) {
+      const zoomedImg = document.querySelector('.gallery-item img.zoomed');
+      if (zoomedImg) {
+        zoomedImg.classList.remove('zoomed');
+        document.body.classList.remove('lightbox-open');
+      }
+    }
+  });
+});
 document.querySelectorAll('.video-item video').forEach(video => {
   video.addEventListener('play', () => {
     document.querySelectorAll('.video-item video').forEach(other => {
