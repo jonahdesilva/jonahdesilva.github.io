@@ -1,50 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jonah de Silva</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
-      img.classList.toggle('zoomed');
-      document.body.classList.toggle('lightbox-open');
-    });
-  });
-});  
-document.querySelectorAll('.video-item video').forEach(video => {
-  video.addEventListener('play', () => {
-    document.querySelectorAll('.video-item video').forEach(other => {
-      if (other !== video) other.pause();
-    });
-  });
-});
-</script>
-<body>
 
-  <header class="site-header">
-    <h1 class="site-title">Jonah de Silva</h1>
-    <p class="site-subtitle"><a href="#photo-gallery">Photography</a> and <a href="#video-gallery">Videography</a> Portfolio</p>
-  </header>
- <section class="about-me">
-  <div class="about-me-photo">
-    <img src="media/photos/headshot.jpg">
-  </div>
-  <div class="about-me-text">
-    <p>I am an aspiring filmmaker with a passion for photgraphy, I study film at the London Screen academy and I enjoy capturing what I see around me, I like the challenge that comes with 35mm film, and the look of the photographs. Recently, I have started to make short films that I am proud of, and I'm sure that the list at the bottom of this page will grow quickly as I continue to make films. I hope you enjoy my work, and if you'd like to see more, feel free to <a href="#contact">get in touch</a>.
-</p>
-  </div>
-</section>
-<hr class="pink">
-<br>
-<h1 class="section-title">Photography</h1>
-  <main class="gallery" id="photo-gallery">
-
-
-        
         <figure class="gallery-item">
             <img src="media/photos/captain & first mate.jpg">
         </figure>
@@ -88,7 +42,11 @@ document.querySelectorAll('.video-item video').forEach(video => {
         <figure class="gallery-item">
             <img src="media/photos/flip-flops 2.JPG">
         </figure>
-
+        
+        <figure class="gallery-item">
+            <img src="media/photos/.DS_Store">
+        </figure>
+        
         <figure class="gallery-item">
             <img src="media/photos/ship.jpg">
         </figure>
@@ -200,7 +158,11 @@ document.querySelectorAll('.video-item video').forEach(video => {
         <figure class="gallery-item">
             <img src="media/photos/waterloo sunset.jpg">
         </figure>
-
+        
+        <figure class="gallery-item">
+            <img src="media/photos/headshot.jpg">
+        </figure>
+        
         <figure class="gallery-item">
             <img src="media/photos/trees.jpg">
         </figure>
@@ -237,58 +199,3 @@ document.querySelectorAll('.video-item video').forEach(video => {
             <img src="media/photos/horses.jpg">
         </figure>
         
-  </main>
-  <hr class="pink">
-  <br>
-  <h1 class="section-title">Videography</h1>
-  <main class="video-gallery" id="video-gallery">
- 
-        <figure class="video-item">
-            <figcaption class="video-title">all i know</figcaption>
-            <video controls preload="metadata" poster="media/videos/thumbnails/all i know.jpg">
-                <source src="media/videos/all i know.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </figure>
- 
-        <figure class="video-item">
-            <figcaption class="video-title">the lakes</figcaption>
-            <video controls preload="metadata" poster="media/videos/thumbnails/the lakes.jpg">
-                <source src="media/videos/the lakes.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </figure>
-</main>
-<hr class="pink">
-<br>
-<h1 class="contact-header" id="contact">Get in Touch</h1>
-  <div class="contact-info">
-    <p>Available for shoots, collaborations, and commissions.</p>
-    <ul class="contact-links">
-      <li><a href="mailto:jonahdesilva@icloud.com">Email</a></li>
-      <li><a href="https://www.instagram.com/jonahdfilm" target="_blank">Instagram</a></li>
-      <li><a href="tel:+44 7395 107868">07395 107868</a></li>
-    </ul>
-  </div>
-  <footer class="site-footer">
-    <p>&copy; 2026 Jonah de Silva. All rights reserved.</p>
-  </footer>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
-      img.classList.toggle('zoomed');
-      document.body.classList.toggle('lightbox-open');
-    });
-  });
-});  
-document.querySelectorAll('.video-item video').forEach(video => {
-  video.addEventListener('play', () => {
-    document.querySelectorAll('.video-item video').forEach(other => {
-      if (other !== video) other.pause();
-    });
-  });
-});
-</script>
-</body>
-</html>
