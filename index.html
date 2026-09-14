@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jonah de Silva</title>
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -92,13 +93,11 @@ const photos = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Shuffle the filenames array
   for (let i = photos.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [photos[i], photos[j]] = [photos[j], photos[i]];
   }
 
-  // Build the gallery markup from the shuffled list
   const gallery = document.getElementById('photo-gallery');
   gallery.innerHTML = photos.map(filename => `
     <figure class="gallery-item">
@@ -106,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </figure>
   `).join('');
 
-  // Open/close the lightbox when clicking an image
   document.querySelectorAll('.gallery-item img').forEach(img => {
     img.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -115,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Close the lightbox when clicking anywhere outside the zoomed image
   document.addEventListener('click', (e) => {
     if (document.body.classList.contains('lightbox-open') && !e.target.classList.contains('zoomed')) {
       const zoomedImg = document.querySelector('.gallery-item img.zoomed');
